@@ -28,30 +28,9 @@ if (post.author && post.author.length > 0) {
   <% } %>
 </div>
 <div class='meta cap'>
-  <% if (showAuthor) { %>
-    <% if (post.layout == 'post' && post.author && post.author.length > 0) { %>
-      <%
-      var authors = [];
-      if (post.author) {
-        post.author.forEach((author, i) => {
-          authors.push(author.name);
-        });
-      }
-      function layoutAuthors() {
-        if (authors.length > 0) {
-          let author = authors.shift();
-          var el = '<span class="cap breadcrumb"' + category_color(author) + '>';
-          el += author;
-          el += '</span>';
-          return el;
-        } else {
-          return '';
-        }
-      }
-      %>
-      <%- layoutAuthors() %>
-    <% } %>
-  <% } %>
+  <span class='cap' id='post-meta'>
+    <%- __('meta.author') %>&nbsp;post.author
+  </span>
   <span class='cap' id='post-meta'>
     <%- __('meta.created') %>&nbsp;<time datetime='<%- date_xml(post.date) %>'><%= date(post.date, config.date_format) %></time>
   </span>
