@@ -29,7 +29,7 @@ if (post.author && post.author.length > 0) {
 </div>
 <div class='meta cap'>
   <span class='cap' id='post-meta'>
-    <%- __('meta.author') %>&nbsp;post.author
+    <%- __('meta.author') %>&nbsp;<%- __('post.author') %>
   </span>
   <span class='cap' id='post-meta'>
     <%- __('meta.created') %>&nbsp;<time datetime='<%- date_xml(post.date) %>'><%= date(post.date, config.date_format) %></time>
