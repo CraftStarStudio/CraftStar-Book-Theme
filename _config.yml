@@ -1,23 +1,21 @@
 ######## Stellar info ########
 stellar:
-  version: '1.1.0'
-  homepage: 'https://xaoxuu.com/wiki/stellar/'
-  repo: 'https://github.com/xaoxuu/hexo-theme-stellar'
+  version: "1.1.0"
+  homepage: "https://xaoxuu.com/wiki/stellar/"
+  repo: "https://github.com/xaoxuu/hexo-theme-stellar"
   cdn_css: # Use cdn links instead of /css/main.css
   cdn_js: # Use cdn links instead of /js/main.js
-
 
 ######## head tags ########
 open_graph:
   enable: true
   twitter_id: # for open_graph meta
 
-
 ######## Sidebar ########
 sidebar:
   logo:
-    avatar: '[config.avatar](/about/)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
-    title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+    avatar: "[config.avatar](/about/)" # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+    title: "[config.title](/)" # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
     home: #'[btn.home](/)'
     post: # '[btn.blog](/blog/)'
@@ -43,11 +41,9 @@ sidebar:
     # welcome
     welcome:
       layout: markdown
-      title: 欢迎来到Cubik的小站
+      title: Hello World!
       content:
-        - '无限创意 / 无限进步 / 无限可能'
-
-
+        - "无限创意 / 无限进步 / 无限可能"
 
 ######## Article ########
 article:
@@ -55,9 +51,9 @@ article:
   auto_excerpt: 200
   # 分类颜色
   category_color:
-    '新闻稿': '#DA0F47'
+    "新闻稿": "#DA0F47"
   # 文章许可协议
-  license: '本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。'
+  license: "本文采用 [署名-非商业性使用-相同方式共享 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，转载请注明出处。"
   # 分享
   share: # [wechat, weibo, email, link]
   # 相关文章，需要安装插件 (for layout: post)
@@ -65,7 +61,6 @@ article:
   related_posts:
     enable: false
     max_count: 5
-
 
 ######## Comments ########
 comments:
@@ -102,7 +97,6 @@ comments:
     friends: #md5加密后的小伙伴邮箱
       - 6783037F2DF30EAB99F9FC256157D875
 
-
 ######## Footer ########
 since: 2020
 footer:
@@ -115,19 +109,17 @@ footer:
     #   url: /
     # - icon: '<img src="https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/social/942ebbf1a4b91.svg"/>'
     #   url: /
-  license: '[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)'
+  license: "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
   source: #'[GitHub](https://github.com/xaoxuu/hexo-theme-stellar)'
-
 
 ######## Tag Plugins ########
 tag_plugins:
   # {% note text %}
   note:
-    default_color: '' # white, dark, red, orange, yellow, green, cyan, blue, purple
+    default_color: "" # white, dark, red, orange, yellow, green, cyan, blue, purple
   # {% checkbox %}
   checkbox:
     interactive: false # enable interactive for user
-
 
 ######## JS Plugins ########
 plugins:
