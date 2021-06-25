@@ -4,6 +4,12 @@ if (post.categories && post.categories.length > 0) {
   showCat = true;
 }
 %>
+<%
+let showAuthor = false;
+if (post.author && post.author.length > 0) {
+  showAuthor = true;
+}
+%>
 <% if (post.cover) { %>
   <div class='post-cover'>
     <img src='<%- post.cover %>'/>
@@ -22,21 +28,21 @@ if (post.categories && post.categories.length > 0) {
   <% } %>
 </div>
 <div class='meta cap'>
-  <% if (showCat) { %>
+  <% if (showAuthor) { %>
     <% if (post.layout == 'post' && post.author && post.author.length > 0) { %>
       <%
-      var cats = [];
+      var authors = [];
       if (post.author) {
-        post.author.forEach((cat, i) => {
-          cats.push(cat.name);
+        post.author.forEach((author, i) => {
+          authors.push(author.name);
         });
       }
-      function layoutCats() {
-        if (cats.length > 0) {
-          let cat = cats.shift();
-          var el = '<span class="cap breadcrumb"' + category_color(cat) + '>';
+      function layoutAuthors() {
+        if (authors.length > 0) {
+          let author = authors.shift();
+          var el = '<span class="cap breadcrumb"' + category_color(author) + '>';
           el += <%- __('meta.author') %>
-          el += cat;
+          el += author;
           el += '</span>';
           return el;
         } else {
@@ -44,7 +50,7 @@ if (post.categories && post.categories.length > 0) {
         }
       }
       %>
-      <%- layoutCats() %>
+      <%- layoutAuthors() %>
     <% } %>
   <% } %>
   <span class='cap' id='post-meta'>
