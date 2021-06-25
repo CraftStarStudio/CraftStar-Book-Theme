@@ -22,6 +22,31 @@ if (post.categories && post.categories.length > 0) {
   <% } %>
 </div>
 <div class='meta cap'>
+  <% if (showCat) { %>
+    <% if (post.layout == 'post' && post.author && post.author.length > 0) { %>
+      <%
+      var cats = [];
+      if (post.author) {
+        post.author.forEach((cat, i) => {
+          cats.push(cat.name);
+        });
+      }
+      function layoutCats() {
+        if (cats.length > 0) {
+          let cat = cats.shift();
+          var el = '<span class="cap breadcrumb"' + category_color(cat) + '>';
+          el += <%- __('meta.author') %>
+          el += cat;
+          el += '</span>';
+          return el;
+        } else {
+          return '';
+        }
+      }
+      %>
+      <%- layoutCats() %>
+    <% } %>
+  <% } %>
   <span class='cap' id='post-meta'>
     <%- __('meta.created') %>&nbsp;<time datetime='<%- date_xml(post.date) %>'><%= date(post.date, config.date_format) %></time>
   </span>

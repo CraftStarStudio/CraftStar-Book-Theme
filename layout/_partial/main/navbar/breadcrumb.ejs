@@ -20,6 +20,7 @@
               <% } %>
         </div>
         <div id='post-meta'>
+          <%- __('meta.author') %>&nbsp;<%- page.author %>
           <%- __('meta.created') %>&nbsp;<time datetime='<%- date_xml(page.date) %>'>
               <%- date(page.date, config.date_format) %>
             </time>

@@ -25,6 +25,7 @@ meta:
   back_to_top: 回到顶部
   more: "更多%s"
   created: 发布于
+  author: 作者
   updated: 更新于
   license: 许可协议
   share: 分享文章
